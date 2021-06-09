@@ -7,17 +7,30 @@
     <title>Pizzawars</title>
   </head>
   <body>
-    <div class="root">{{ message }}</div>
+    <div class="root">
+      <ul>
+        <li v-for="pizza in pizzas">{{ pizza.name }}</li>
+      </ul>
+    </div>
     <script src="https://unpkg.com/vue@3.1.1"></script>
     <script>
-      const VueApp = {
+      const Pizzawars = {
         data() {
           return {
-            message: "Hello Vue!",
+            pizzas: [
+              {
+                id: 1,
+                name: "Meatball Marinara",
+              },
+              {
+                id: 2,
+                name: "Truffle Mushroom",
+              },
+            ],
           };
         },
       };
-      Vue.createApp(VueApp).mount(".root");
+      Vue.createApp(Pizzawars).mount(".root");
     </script>
   </body>
 </html>
