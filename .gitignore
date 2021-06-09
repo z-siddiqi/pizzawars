@@ -1,0 +1,10 @@
+# flask
+*.py[co]
+*.DS_*
+
+# environments
+.env
+.venv/
+
+# code editor
+.vscode/*
